@@ -335,7 +335,7 @@ const Navbar = () => {
 
                 {/* Mobile User Menu */}
                 {isAuthenticated && (
-                  <div className="mt-8 border-t border-gray-100 px-4">
+                  <div className="mt-5 border-t border-gray-100 px-4">
                     
                     <button
                       onClick={() => {

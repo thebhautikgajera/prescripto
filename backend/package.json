@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "node test-api.js",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcrypt": "6.0.0",
+    "cloudinary": "2.7.0",
+    "cors": "2.8.5",
+    "dotenv": "17.0.1",
+    "express": "5.1.0",
+    "jsonwebtoken": "9.0.2",
+    "mjml": "4.15.3",
+    "mongoose": "8.16.1",
+    "multer": "2.0.1",
+    "nodemailer": "7.0.5",
+    "nodemon": "3.1.10",
+    "puppeteer": "24.15.0",
+    "razorpay": "2.9.6",
+    "socket.io": "4.8.1",
+    "validator": "13.15.15"
+  },
+  "devDependencies": {
+    "axios": "1.10.0",
+    "form-data": "4.0.3",
+    "node-fetch": "2.7.0"
+  },
+  "keywords": []
+}

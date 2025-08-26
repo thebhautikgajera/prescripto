@@ -113,11 +113,6 @@ app.get('/api/health/auth', (req, res) => {
     });
 })
 
-// Loader.io verification route
-app.get('/loaderio-0b624cf9fa0c2f11a3ae8f8cb5067b6d', (req, res) => {
-    res.type('text/plain').send('loaderio-0b624cf9fa0c2f11a3ae8f8cb5067b6d')
-})
-
 // Error handling middleware
 app.use(handleMulterError)
 app.use(multipartErrorHandler)

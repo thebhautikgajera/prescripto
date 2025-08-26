@@ -78,11 +78,6 @@ app.use('/api/payment', paymentRouter)
 app.use('/api/review', reviewRouter)
 app.use('/api/ai', aiRouter)
 
-// Loader.io verification route 🚀
-app.get('/loaderio-0b624cf9fa0c2f11a3ae8f8cb5067b6d/', (req, res) => {
-    res.send('loaderio-0b624cf9fa0c2f11a3ae8f8cb5067b6d')
-})
-
 app.get('/', (req, res)=>{
     res.send('API is working')
 })
@@ -108,11 +103,19 @@ app.get('/api/health/auth', (req, res) => {
         });
     }
     
+    // If we got here, at least the token format is valid
+    // The actual token verification would be done by the authenticateToken middleware
+    // but for a simple health check, we just verify the format
     res.status(200).json({
         success: true,
         message: 'Authenticated API is healthy',
         timestamp: new Date().toISOString()
     });
+})
+
+// Loader.io verification route
+app.get('/loaderio-0b624cf9fa0c2f11a3ae8f8cb5067b6d', (req, res) => {
+    res.type('text/plain').send('loaderio-0b624cf9fa0c2f11a3ae8f8cb5067b6d')
 })
 
 // Error handling middleware

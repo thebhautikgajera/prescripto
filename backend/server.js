@@ -84,10 +84,13 @@ app.get('/', (req, res)=>{
 
 // Health check endpoint - no authentication required
 app.get('/api/health', (req, res) => {
+    console.log("🔥 Health hit at:", new Date().toISOString());
+
     res.status(200).json({
         success: true,
         message: 'API is healthy',
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        uptime: process.uptime()
     })
 })
 
